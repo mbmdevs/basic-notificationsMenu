@@ -1,0 +1,145 @@
+/*Global Styles*/
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    --mainfont:1.6rem;
+    --smallfont:1.4rem; 
+}
+body {
+    height: 100vh;
+    font-size: var(--smallfont);
+    font-family: 'Trebuchet', sans-serif;
+    padding:20px;
+    display:grid;
+    place-items: center;
+}
+img {
+    width:6rem;
+    height:6rem;
+    border-radius: 50%;
+    background:royalblue;
+    outline: none;
+}
+hr {
+    border:none;
+    border-top:2px solid lightgray;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size:2rem;
+}
+h2 {
+    font-size:1.8rem;
+}
+/*You have to target the li*/
+li::marker {
+    color:blue;
+    font-size:4rem;
+}
+/*Styling the container*/
+.container {
+    width:600px;
+    height: 500px;
+    padding:20px 0px 10px 0px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+.notifications {
+    font-size: var(--smallfont);
+    width:80%;
+    min-height:50%;
+    margin:auto;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    width:80%;
+    margin:0 auto 20px auto;
+}
+header h1 {
+    font-weight: normal;
+}
+.tick {
+    color:royalblue;
+}
+/*For Active states*/
+.tick:hover {
+    text-decoration: underline;
+}
+.message-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin:0px 0px 10px 20px;
+    padding:15px 10px 15px 10px;
+}
+
+.message {
+    font-weight:600;
+}
+
+/*For Active states*/
+.message-box:hover {
+    background:rgb(238, 248, 250);
+    border-radius: 10px;
+}
+.message-box:hover .content-box ul li:nth-of-type(1) {
+    color:royalblue;
+}
+.box1 .message {
+    width:80%;
+}
+.metainfo-box {
+    display:flex;
+    opacity:60%;
+    margin-top:10px;
+}
+.icon-box {
+    align-self: center;
+}
+
+h2.tick, hr {
+    width:85%;
+    margin:0 auto;
+    font-weight: normal;
+}
+hr{
+    margin:30px auto 10px auto;
+}
+ 
+@media screen and (max-width:650px) {
+    html {
+        font-size:55%;
+    }
+    img {
+        width:5rem;
+        height:5rem;
+    }
+    .container {
+        width:90vw;
+        min-height:500px;
+        padding:20px 0px 50px 0px;
+    } 
+    header {
+        margin:0 auto 10px auto;
+    }
+    .message-box {
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width:530px) {
+    html {
+        font-size: 50%;
+    }
+    .message {
+        max-width:85%;
+    }
+    .metainfo-box {
+        width:120%;
+    }
+}
